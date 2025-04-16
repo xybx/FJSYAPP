@@ -1,0 +1,208 @@
+.espace{
+  width: 100vw;
+  height: 100vh;
+  background: url('@/assets/space/sbg.png') center top no-repeat;
+  background-size: 100% 100%;
+  font-family: "SimHei";
+  .el-container{
+    min-height: 100%;
+    .el-header {
+      height:80px !important;
+      background: url('@/assets/space/headerbg.png') top center no-repeat;
+      background-size: 100% 100%;
+      display: flex;
+      flex-direction: row;
+      .el-row {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex: 1;
+        .el-col {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex: 1;
+          h3 {
+            font-size:1.7vmax;
+            color: #fff;
+            letter-spacing:5px;
+            margin:0;
+            position: relative;
+            top:-8px;
+          }
+          &:last-child {
+            flex-direction: row;
+            justify-content: flex-end;
+          }
+          .rlist {
+            width: 40%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            li {
+              width: 33.3%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              cursor: pointer;
+              .el-button {
+                height: 2.4vmax;
+                background: url('@/assets/space/button.png') top center no-repeat;
+                background-size: 100% 100%;
+                border: none;
+                color: #fff;
+              }
+              &:nth-child(2){
+                margin-left: 20px;
+              }
+              &:nth-child(2) span {
+                font-size: 18px;
+                color: #49A3FF;
+              }
+              &:nth-child(3) span {
+                font-size: 14px;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+    .el-main{
+        display: flex;
+        padding:0 18px 15px;
+        .el-row{
+          display: flex;
+          flex: 1;
+          min-height: 100%;
+          .el-col {
+            min-height: 100%;
+            &:first-child{
+              padding-right: 10px;
+            }
+            &:last-child{
+              padding-left: 10px;
+            }
+            .leftList,.rightList{
+              display:flex;
+              flex-direction:column;
+              flex:1;
+              height: 100%;
+              margin:0;
+              padding: 0;
+              li{
+                width: 100%;
+                display:flex;
+                flex:1;
+                flex-direction: column;
+                height:49%;
+                cursor: pointer;
+                &:first-child{
+                  margin-bottom:2%;
+                }
+                .chart-header{
+                  width:100%;
+                  display:flex;
+                  flex-direction: row;
+                  align-items: center;
+                  height:46px;
+                  background:url('@/assets/space/titbg.png') top center no-repeat;
+                  background-size: 100%;
+                  margin-bottom:3px;
+                  span{
+                    -webkit-line-clamp: 2;
+                    background: -webkit-linear-gradient(top,#EFFCFE 56%,#31BEFF,#0EC5EC);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-shadow: 0px 2px 8px rgba(5,28,55,0.42);
+                    position: relative;
+                    top:-3px;
+                    padding-left:12px;
+                    &::before{
+                      content:'\e600';
+                      font-size:25px;
+                      letter-spacing:15px;
+                    }
+                  }
+                }
+                .chart-body{
+                  display:flex;
+                  flex-direction: column;
+                  flex:1;
+                  height:calc(49% - 49px);
+                  background:linear-gradient(180deg, rgba(187, 220, 255, 0) 0%, rgba(13, 136, 255, .3) 120%);
+                  background:-moz-linear-gradient(180deg, rgba(187, 220, 255, 0) 0%, rgba(13, 136, 255, .3) 120%);
+                  .bodytop{
+                    background: linear-gradient(-90deg, rgba(80, 232, 255, 0) 0%, rgba(83, 122, 252, 0.5) 100%);
+                    opacity:0.8;
+                    display:flex;
+                    flex-direction: row;
+                    align-items:center;
+                    justify-content:center;
+                    padding:8px 0;
+                    span{
+                      color:#fff;
+                      font-size:15px;
+                      letter-spacing: 1px;
+                      &::before{
+                        content:'\e67f';
+                        font-size: 18px;
+                        color: rgba(27, 180, 242, 0.99);
+                        letter-spacing: 10px;
+                      }
+                    }
+                  }
+                  .bodyend{
+                    display:flex;
+                    flex:1;
+                    .globalCharts{
+                      width:100%;
+                      height:100%;
+                    }
+                  }
+                }
+              }
+            }
+            .leftList{
+
+            }
+            .centerbtn{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              padding-top:30px;
+              .el-select{
+                width:16%;
+                background:url('@/assets/space/btn_bg.png') top center no-repeat;
+                background-size: 100% 100%;
+              }
+              .el-popover__reference-wrapper{
+                .el-popover__reference{
+                  background: url('@/assets/space/btn_bg.png') top center no-repeat;
+                  background-size: 100% 100%;
+                  border: 0;
+                  border-radius: 0;
+                  font-weight: 700;
+                  letter-spacing: 2px;
+                  color: #fff;
+                  font-size: 15px;
+                }
+
+
+              }
+            }
+
+
+          }
+        }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "3698103",
+  "name": "福建省院",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "23571858",
+      "name": "用户2",
+      "font_class": "yonghu2",
+      "unicode": "e7b2",
+      "unicode_decimal": 59314
+    },
+    {
+      "icon_id": "12594579",
+      "name": "流程管理",
+      "font_class": "liuchengguanli",
+      "unicode": "e725",
+      "unicode_decimal": 59173
+    },
+    {
+      "icon_id": "15392660",
+      "name": "监管3",
+      "font_class": "jianguan3",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "15954600",
+      "name": "城市_fill",
+      "font_class": "city_fill",
+      "unicode": "e79d",
+      "unicode_decimal": 59293
+    },
+    {
+      "icon_id": "17938954",
+      "name": "时空-空间 选中",
+      "font_class": "shikong-kongjianxuanzhong",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}

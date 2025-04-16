@@ -1,0 +1,15 @@
+/*
+ * @ProjectName:fjsy-app
+ * @Author:12390
+ * @Date: 2023/3/24 11:50:27
+ * @LastEditors: 12390
+ * @LastEditTime: 2023/3/24 11:50:27
+ * @Description: HTML Page of Css
+ * Copyright (c) 2022 by xybx, All Rights Reserved. 
+*/
+@font-face {
+  font-family: "Hei FangZheng";
+  src: url('HeiTiFangZheng.woff2') format('woff2'),
+       url('HeiTiFangZheng.woff') format('woff'),
+       url('HeiTiFangZheng.ttf') format('truetype');
+}

@@ -1,0 +1,261 @@
+{
+  "id": "3698103",
+  "name": "福建省院",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "22843396",
+      "name": "城市名片",
+      "font_class": "chengshimingpian",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "7248536",
+      "name": "图层",
+      "font_class": "tuceng",
+      "unicode": "ea2d",
+      "unicode_decimal": 59949
+    },
+    {
+      "icon_id": "8765214",
+      "name": "查询",
+      "font_class": "chaxun",
+      "unicode": "e62f",
+      "unicode_decimal": 58927
+    },
+    {
+      "icon_id": "20853321",
+      "name": "查询",
+      "font_class": "chaxun1",
+      "unicode": "e6a2",
+      "unicode_decimal": 59042
+    },
+    {
+      "icon_id": "2077527",
+      "name": "调整",
+      "font_class": "tiaozheng",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "1739228",
+      "name": "帮助说明",
+      "font_class": "bangzhushuoming",
+      "unicode": "e6f3",
+      "unicode_decimal": 59123
+    },
+    {
+      "icon_id": "22269915",
+      "name": "图例",
+      "font_class": "tuli",
+      "unicode": "e6ae",
+      "unicode_decimal": 59054
+    },
+    {
+      "icon_id": "33971808",
+      "name": "自治云",
+      "font_class": "zizhiyun",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "10480270",
+      "name": "柱状图",
+      "font_class": "zhuzhuangtu",
+      "unicode": "e929",
+      "unicode_decimal": 59689
+    },
+    {
+      "icon_id": "9874461",
+      "name": "KHCFDC_饼状图",
+      "font_class": "bingzhuangtucopy",
+      "unicode": "e6c6",
+      "unicode_decimal": 59078
+    },
+    {
+      "icon_id": "2080215",
+      "name": "dkw_金额",
+      "font_class": "dkw_jine",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "3544188",
+      "name": "金钱袋",
+      "font_class": "ico_home_obligation",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "12539444",
+      "name": "g箭头s",
+      "font_class": "gjiantous",
+      "unicode": "e7cf",
+      "unicode_decimal": 59343
+    },
+    {
+      "icon_id": "1237187",
+      "name": "规划设计",
+      "font_class": "guihuasheji",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "9851593",
+      "name": "城市管理",
+      "font_class": "chengshiguanli",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "29668789",
+      "name": "数据监测",
+      "font_class": "shujujiance",
+      "unicode": "e7da",
+      "unicode_decimal": 59354
+    },
+    {
+      "icon_id": "926438",
+      "name": "资产统计",
+      "font_class": "tongji",
+      "unicode": "e67f",
+      "unicode_decimal": 59007
+    },
+    {
+      "icon_id": "11200646",
+      "name": "图层",
+      "font_class": "layers",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1240761",
+      "name": "项目",
+      "font_class": "xiangmu",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "1471613",
+      "name": "knowledge",
+      "font_class": "knowledge",
+      "unicode": "e629",
+      "unicode_decimal": 58921
+    },
+    {
+      "icon_id": "7017744",
+      "name": "模板设计",
+      "font_class": "mobansheji",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "7542149",
+      "name": "24gf-building",
+      "font_class": "24gf-building",
+      "unicode": "e838",
+      "unicode_decimal": 59448
+    },
+    {
+      "icon_id": "14152437",
+      "name": "建设",
+      "font_class": "jianshe",
+      "unicode": "e605",
+      "unicode_decimal": 58885
+    },
+    {
+      "icon_id": "14152440",
+      "name": "规划",
+      "font_class": "guihua",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "7542150",
+      "name": "24gf-city4",
+      "font_class": "24gf-city4",
+      "unicode": "e839",
+      "unicode_decimal": 59449
+    },
+    {
+      "icon_id": "23791304",
+      "name": "所属乡镇",
+      "font_class": "suoshuxiangzhen",
+      "unicode": "ea06",
+      "unicode_decimal": 59910
+    },
+    {
+      "icon_id": "23855671",
+      "name": "行政区域管理",
+      "font_class": "hangzhengquyuguanli",
+      "unicode": "e628",
+      "unicode_decimal": 58920
+    },
+    {
+      "icon_id": "31239784",
+      "name": "村委会",
+      "font_class": "cunweihui",
+      "unicode": "100dd",
+      "unicode_decimal": 65757
+    },
+    {
+      "icon_id": "5387522",
+      "name": "关闭",
+      "font_class": "guanbi",
+      "unicode": "eaf2",
+      "unicode_decimal": 60146
+    },
+    {
+      "icon_id": "579741",
+      "name": "用户",
+      "font_class": "yonghu",
+      "unicode": "e788",
+      "unicode_decimal": 59272
+    },
+    {
+      "icon_id": "2194092",
+      "name": "验证码",
+      "font_class": "yanzhengma",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "23571858",
+      "name": "用户2",
+      "font_class": "yonghu2",
+      "unicode": "e7b2",
+      "unicode_decimal": 59314
+    },
+    {
+      "icon_id": "12594579",
+      "name": "流程管理",
+      "font_class": "liuchengguanli",
+      "unicode": "e725",
+      "unicode_decimal": 59173
+    },
+    {
+      "icon_id": "15392660",
+      "name": "监管3",
+      "font_class": "jianguan3",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "15954600",
+      "name": "城市_fill",
+      "font_class": "city_fill",
+      "unicode": "e79d",
+      "unicode_decimal": 59293
+    },
+    {
+      "icon_id": "17938954",
+      "name": "时空-空间 选中",
+      "font_class": "shikong-kongjianxuanzhong",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}

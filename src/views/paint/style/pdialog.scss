@@ -1,0 +1,265 @@
+.pdialog{
+  overflow: hidden;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  background:rgba(7, 13, 43, .8);
+  border:1px solid #387482;
+  .phead{
+    //background: linear-gradient(90deg, rgba(58, 158, 240, 1) 0% ,transparent 72%);
+    padding:15px 10px;
+    margin-right: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position:relative;
+    &:before{
+      content:'';
+      width:4px;
+      height: 8px;
+      background-color:rgba(116, 219, 251, 1);
+      position: absolute;
+      top:0;
+      left:0;
+    }
+    &:after{
+      content:'';
+      width:4px;
+      height: 8px;
+      background-color:rgba(116, 219, 251, 1);
+      position: absolute;
+      top:0;
+      right:0;
+    }
+    .icon-guanbi {
+      color:rgba(86, 180, 212, 1);
+      padding:2px;
+      background: rgba(46,90,103,0.3);
+      border: 1px solid #36717F;
+      cursor: pointer;
+    }
+    .el-dialog__title {
+      font-family: SimHei;
+      letter-spacing:1px;
+      color: #fff;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+    .el-dialog__headerbtn {
+      position: unset;
+      width: auto;
+      height: auto;
+    }
+  }
+  .pbody {
+    display: flex;
+    flex-direction:column;
+    height:100%;
+    padding:15px 20px;
+    background:transparent;
+    overflow-y: auto;
+    ::v-deep{
+      .el-form{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        .el-form-item{
+          //width:24%;
+          display: flex;
+          flex-direction: row;
+          .twoinput {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .el-select {
+              width:92px;
+              margin-right:8px;
+            }
+            .el-input {
+              &.sinput {
+                width:200px;
+              }
+              &.dinput {
+                width:100px;
+              }
+            }
+          }
+          .el-select{
+            width:300px;
+          }
+          .el-form-item__label{
+            color:rgba(255, 255, 255, .5);
+          }
+          .el-form-item__content{
+            .el-date-editor.el-input__inner{
+              width:300px;
+              height:32px;
+              line-height:32px;
+              color: #fff;
+              font-size: 15px;
+              background: rgba(16, 59, 107, 0.5);
+              border: 1px solid #6fb2fc;
+              border-radius: 2px;
+            }
+            .el-date-editor .el-range-input {
+              color: #fff;
+              font-size: 12px;
+              background: none;
+            }
+            .el-date-editor .el-range__icon{
+              line-height:24px;
+            }
+            .el-date-editor .el-range-separator {
+              color: #fff;
+              line-height:24px;
+            }
+            //.el-date-editor.el-input{
+            //  width:127px;
+            //  &:last-child{
+            //    margin-left:6px;
+            //  }
+            //  .el-input__inner{
+            //    padding-left:25px;
+            //    padding-right:0px;
+            //  }
+            //  .el-input__prefix{
+            //    left:0;
+            //  }
+            //}
+            .el-button{
+              padding:8px 20px;
+              font-size:15px;
+              background-color:rgba(10, 70, 115, 1);
+              border-color:rgba(10, 70, 115, 1);
+            }
+            .el-input{
+              //width:260px;
+              .el-select__caret{
+                color:rgba(111, 178, 252, 1);
+              }
+              .el-input__inner{
+                height:32px;
+                line-height:32px;
+                color:#fff;
+                font-size:15px;
+                background: rgba(16,59,107,0.5);
+                border:1px solid rgba(111, 178, 252, 1);
+                border-radius:2px;
+                &::placeholder{
+                  font-size:13px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    ::v-deep{
+      .tablebox{
+        width: 100%;
+        overflow-x: auto;
+        &::-webkit-scrollbar{
+          display: none;
+        }
+      }
+      .el-table.custable{
+        background:none;
+        border-color:rgba(0, 172, 222, 1);
+        &::before{
+          background-color:rgba(0, 172, 222, 1);
+        }
+        &::after{
+          background-color:rgba(0, 172, 222, 1);
+        }
+        th{
+          background-color:rgba(29, 59, 103, .5)!important;
+        }
+        .el-table__header{
+          //width:auto!important;
+        }
+        .el-table__body{
+          //width:auto!important;
+        }
+        &.el-table th.el-table__cell{
+          padding:7px 0 8px;
+        }
+        &.el-table td.el-table__cell{
+          padding:5px 0;
+        }
+        tr,td{
+          background:none;
+        }
+        th.el-table__cell,td.el-table__cell{
+          border-right: none;
+        }
+        &.el-table--enable-row-hover .el-table__body tr:hover>td.el-table__cell{
+          background:none;
+        }
+        &.el-table--enable-row-hover .el-table__body tr:hover>td .cell{
+          color:rgba(111, 178, 252, 1);
+          cursor: pointer;
+        }
+        &.el-table th.el-table__cell{
+          background:none;
+        }
+        &.el-table td.el-table__cell, &.el-table th.el-table__cell.is-leaf{
+          border-bottom:1px dashed rgba(0, 172, 222, .4);
+        }
+        .cell{
+          color:#fff;
+          font-size: 15px;
+          font-family: SimHei;
+        }
+        th{
+          .cell{
+            color: rgba(255, 255, 255, .4);
+          }
+        }
+      }
+    }
+    ::v-deep{
+      .el-table__body-wrapper{
+        &::-webkit-scrollbar{
+          height:13px;
+        }
+        &::-webkit-scrollbar-thumb{
+          background-color:rgba(0, 161, 247, 1);
+        }
+        &::-webkit-scrollbar-track{
+          background-color:rgba(0, 161, 247, .4);
+        }
+      }
+    }
+    .el-pagination{
+      text-align: center;
+      margin-top: 30px;
+      ::v-deep{
+        .el-pagination__total{
+          color: #fff;
+        }
+        .btn-prev,.btn-next{
+          background: none;
+          border: 2px solid #fff;
+          border-radius: 50%;
+        }
+        .el-pager{
+          li{
+            background: none;
+            color: #fff;
+            font-size: 14px;
+            &.active{
+              background:#409EFF;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+

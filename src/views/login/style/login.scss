@@ -1,0 +1,130 @@
+#login-container {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    height: 100%;
+}
+
+.el-header{
+    padding: 0 !important;
+}
+
+.el-container {
+    background: url(@/assets/login/bg.png) no-repeat center;
+    background-size: cover;
+    padding: 0 !important;
+    height: 100%;
+}
+
+.el-main {
+    height: 99vh;
+    margin: 0px !important;
+    overflow: hidden !important;
+}
+
+.title {
+    width: 55vw;
+    height: 8vh;    
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: url(@/assets/login/logotitle.png) left no-repeat;
+    background-size: auto;
+    margin-top: 1vh;
+}
+.left{
+    height: 80vh;
+    display: flex;
+    flex-direction:column;
+    padding-left: 2vmax;
+    position: relative;
+}
+.leftimg{
+    width: 42vw;
+    height: 30vmax;
+    position: absolute;
+    left: 12vw;
+    top: 12vh;
+    z-index: 0;
+}
+.bottom{
+    width: 60vw;
+    height: 14vmax;
+    background: url(@/assets/login/bottom.png) center no-repeat;
+    position: absolute;
+    left: 4vw;
+    bottom: 4vh;
+    z-index: 0;
+}
+.animate__slower {
+    --animate-duration: 6s;
+}
+
+.el-card {
+    width: 22vw;
+    // height: 50vh;
+    background: url(@/assets/login/loginbg.png) center no-repeat;
+    background-size: 109% 108%;
+    border: none !important;
+}
+
+.el-card__body,
+.el-main {
+    padding: 2px !important;
+}
+
+.box-card {
+    margin: 25% 4%;
+    padding: 6rem 2rem;
+    box-sizing: border-box;
+    box-shadow: 0px 22px 24px 0px rgba(62, 131, 233, 0) !important;
+    border-radius: 8px !important;
+}
+
+h2 {
+    color: #fff;
+    margin: 0 0 2rem 0 !important;
+    font-weight: bold;
+    letter-spacing: .3rem;
+}
+
+.icon-yonghu,
+.icon-yanzhengma {
+    color: rgba(49, 179, 255, 1);
+    font-size: 1.5rem;
+}
+
+.el-button {
+    width: 100%;
+    box-shadow: 0px 10px 24px 0px rgba(97, 127, 230, 0.54);
+    background: rgba(49, 179, 255, 1);
+    letter-spacing: 4px;
+}
+
+.el-input {
+    border: 1px solid rgba(32, 152, 253, 0.51) !important;
+    width: 17vmax;
+}
+
+::v-deep .el-input__inner  {
+    background: rgba(11, 161, 248, 0.4) !important;
+    border: 1px solid rgba(32, 152, 253, 0.51) !important;
+    color: #fff;
+}
+
+.el-input--prefix .el-input__inner {
+    padding-left: 2rem !important;
+}
+
+::v-deep .el-checkbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+}
+
+::v-deep .el-checkbox__inner{
+    background: rgba(11, 161, 248, 0.4) !important;
+}

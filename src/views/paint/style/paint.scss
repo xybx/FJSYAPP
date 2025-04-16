@@ -1,0 +1,823 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  font-family: "SimHei";
+}
+
+.el-col-10 {
+  position: relative;
+}
+
+.title {
+  height: 77px;
+  background-size: 100% 100%;
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 2px;
+  cursor: default;
+}
+
+.paint {
+  width: 100%;
+  height: 100%;
+  background: url("@/assets/paint/bg.png") no-repeat;
+  background-size: 100% 100%;
+  font-family: "SimHei";
+  overflow: hidden;
+
+  .el-header {
+    width: 100%;
+    height: 80px !important;
+    background: url("@/assets/paint/top.png") top center no-repeat;
+    display: flex;
+    flex-direction: column;
+
+    .el-row {
+      display: flex;
+      height: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+
+      .el-col {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+
+        h3 {
+          font-size: 24px;
+          color: #fff;
+          letter-spacing: 3px;
+        }
+
+        &:last-child {
+          flex-direction: row;
+          justify-content: flex-end;
+        }
+
+        .rlist {
+          width: 60%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-around;
+          li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            //margin-left:3px;
+            .el-button {
+              height: 2.5vmax;
+              background: url("@/assets/paint/button.png") top center no-repeat;
+              background-size: 100% 100%;
+              border: none;
+              color: #fff;
+            }
+            &:nth-child(1) {
+              margin-left: 0;
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+              width: 26%;
+            }
+            &:nth-child(3),
+            &:nth-child(4) {
+              width: 22%;
+            }
+            &:nth-child(3) span {
+              font-size: 16px;
+              color: #49a3ff;
+            }
+
+            &:nth-child(4) span {
+              font-size: 15px;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .el-main {
+    display: flex;
+    padding: 0 10px 10px;
+
+    .el-row {
+      display: flex;
+      flex: 1;
+      min-height: 100%;
+
+      .el-col {
+        min-height: 100%;
+
+        // position: relative;
+        #mapbox {
+          width: 99%;
+          height: 100%;
+          display: flex;
+          flex: 1;
+          // outline: none !important;
+
+          .esri-view .esri-view-surface--inset-outline:focus::after {
+            outline: auto 0px Highlight !important;
+            outline: auto 0px -webkit-focus-ring-color !important;
+          }
+        }
+
+        // 属性样式
+        .mappop {
+          position: absolute;
+          bottom: 1%;
+          right: 1%;
+          background-color: rgba(7, 13, 43, 0.7);
+          border: 1.5px solid #00acc6;
+          color: #fff;
+          padding: 10px 8px 0 15px;
+          width: 320px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 8px;
+            background: #74dbfb;
+            z-index: 99;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 4px;
+            height: 8px;
+            background: #74dbfb;
+            z-index: 99;
+          }
+
+          .mapheader {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+
+            .el-button {
+              width: 24px;
+              height: 24px;
+              background-color: rgba(0, 172, 198, 0.2);
+              color: #fff;
+              padding: 3px 3px;
+              border-color: rgba(23, 115, 129, 1);
+
+              .el-icon {
+                font-size: 16px;
+                color: rgba(27, 182, 216, 1);
+              }
+            }
+          }
+
+          .mapbody {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0 15px;
+
+            .ul {
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              list-style: none;
+              max-height: 320px;
+              overflow-y: auto;
+
+              li {
+                padding: 10px 0;
+                border-bottom: 1px dashed rgba(0, 172, 222, 0.26);
+                padding-left: 12px;
+                position: relative;
+
+                &:last-child {
+                  border-bottom: none;
+                }
+
+                &::before {
+                  content: "";
+                  width: 4px;
+                  height: 4px;
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  top: calc(50% - 1px);
+                  background: #20fbf4;
+                }
+
+                label {
+                  color: rgba(240, 240, 240, 1);
+                }
+
+                span {
+                  color: rgba(119, 248, 243, 1);
+
+                  &.file {
+                    width: 74%;
+                    float: right;
+                  }
+
+                  dl {
+                    width: 100%;
+                    float: left;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+
+                    dd {
+                      margin: 0;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: center;
+                      justify-content: space-between;
+                      margin-bottom: 10px;
+
+                      i {
+                        font-size: 18px;
+                        cursor: pointer;
+                      }
+                    }
+                  }
+                }
+              }
+
+                 
+          &::-webkit-scrollbar {
+              /*滚动条整体样式*/
+              width: 8px; /*高宽分别对应横竖滚动条的尺寸*/
+              height: 8px;
+            }
+            &::-webkit-scrollbar-thumb {
+              /*滚动条里面小方块*/
+              border-radius: 2px;
+              background: #3a9ef0;
+            }
+            &::-webkit-scrollbar-track {
+              /*滚动条里面轨道*/
+              background: rgba(58, 158, 240, 0.4);
+            }
+
+            }
+          
+
+            .el-pagination {
+              margin-top: 20px;
+            }
+
+           
+          }
+        }
+
+        #mapbox:focus-visible {
+          outline: none !important;
+        }
+
+        #OneLine {
+          position: absolute;
+          border-bottom: 2px solid rgba(121, 251, 246, 1);
+          border-left: 2px solid rgba(121, 251, 246, 1);
+        }
+
+        .parnum {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          background: rgba(7, 13, 43, 0.8);
+          // box-shadow: 0 0 12px 8px rgba(76,169,254,.35) inset;
+          border: 1px #387482 solid;
+          display: flex;
+          flex-direction: column;
+          padding: 5px;
+
+          .map-top {
+            display: flex;
+            flex-direction: row-reverse;
+            color: #56b4d4;
+
+            span:hover {
+              cursor: pointer;
+            }
+
+            span {
+              width: 19px;
+              height: 16px;
+              border: solid 1px #36717f;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+
+          .map-mid {
+            width: 305px;
+            height: 110px;
+            background-image: url("@/assets/paint/numName.png");
+            color: #77f8f3;
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .map-mid-name {
+              margin-left: 25px;
+            }
+
+            .map-mid-sum {
+              font-size: 24px;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-around;
+            }
+          }
+
+          .map-bot {
+            color: #77f8f3;
+            display: flex;
+            flex-direction: column;
+
+            .map-bot-top {
+              display: flex;
+              justify-content: space-around;
+              border-bottom: 1px dashed rgba(9, 169, 217, 0.26);
+            }
+
+            .map-bot-num {
+              display: flex;
+              justify-content: flex-end;
+            }
+          }
+        }
+
+        .itembox {
+          display: flex;
+          flex-direction: column;
+
+          &.h50 {
+            height: 50%;
+          }
+
+          .el-form {
+            width: 96%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            .el-form-item {
+              width: 24%;
+              margin-bottom: 0;
+              margin-right: 0;
+
+              .el-input,
+              .el-select {
+                .el-input__inner {
+                  height: 30px;
+                  line-height: 30px;
+                  background: rgba(29, 59, 103, 0.5);
+                  border-color: rgba(111, 178, 252, 1);
+                  color: #fff;
+                  padding-right: 10px;
+                }
+              }
+
+              .el-date-editor.el-input,
+              .el-date-editor.el-input__inner {
+                width: auto;
+                color: #fff;
+              }
+            }
+          }
+
+          .titbox {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            padding-bottom: 10px;
+            padding-top: 10px;
+
+            &::before {
+              content: "";
+              display: block;
+              width: 96%;
+              margin: 0 auto;
+              height: 4px;
+              position: absolute;
+              left: 2%;
+              bottom: 0;
+              background: url("@/assets/paint/linebig.png") top center no-repeat;
+              background-size: 100% 100%;
+            }
+
+            span {
+              color: #fff;
+              font-size: 20px;
+              font-weight: 600;
+              position: relative;
+              padding-left: 45px;
+
+              &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 5%;
+                height: 100%;
+                left: 15px;
+                background: url("@/assets/paint/iconline.png") top center
+                  no-repeat;
+                background-size: 100% 100%;
+              }
+            }
+
+            .blist {
+              width: 40%;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              position: absolute;
+              top: 0;
+              right: 3%;
+              bottom: 8px;
+              li {
+                width: 48%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(75, 155, 202, 0.2);
+                padding: 4px 0;
+                border: 1px solid rgba(73, 150, 195, 1);
+                color: #fff;
+                cursor: pointer;
+
+                &.active {
+                  background-color: rgba(75, 155, 202, 0.6);
+                }
+              }
+              &.slist {
+                width: 20%;
+                li {
+                  width: 100%;
+                }
+              }
+            }
+          }
+
+          #overbar,
+          #catebar,
+          #tenline {
+            display: flex;
+            flex: 1;
+            width: 100%;
+            height: 100%;
+          }
+
+          #catebar {
+            .hislist {
+              display: flex;
+              flex-direction: column;
+              margin: 0;
+              padding: 0;
+              width: 160px;
+
+              dt {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 14px;
+                font-weight: bold;
+              }
+
+              dd {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0;
+
+                .hfont {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+
+                  i {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 5px;
+                  }
+                }
+
+                & > span {
+                  font-size: 14px;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+
+          #overbar,
+          #overline {
+            .barbox {
+              display: flex;
+              flex-direction: column;
+              margin: 0;
+              padding: 0;
+              width: 160px;
+
+              dt {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 14px;
+                font-weight: bold;
+              }
+
+              dd {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0;
+
+                .hfont {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+
+                  i {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    margin-right: 5px;
+                  }
+                }
+
+                & > span {
+                  font-size: 14px;
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+
+          .pieraduisbox {
+            width: 40%;
+
+            .pielist {
+              overflow: hidden;
+              margin: 0;
+
+              dt {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                box-shadow: 0 0 12px 8px rgba(76, 169, 254, 0.35) inset;
+                border: 1px solid rgba(99, 215, 250, 1);
+                padding: 0 10px;
+                height: 60px;
+                font-size: 16px;
+                position: relative;
+
+                &::before {
+                  content: "";
+                  width: 0px;
+                  height: 0px;
+                  border-left: 8px solid rgba(99, 215, 250, 1);
+                  border-right: 8px solid transparent;
+                  border-top: 8px solid transparent;
+                  position: absolute;
+                  top: 4px;
+                  right: 4px;
+                  transform: rotate(180deg);
+                }
+
+                &::after {
+                  content: "";
+                  width: 0px;
+                  height: 0px;
+                  border-left: 8px solid transparent;
+                  border-right: 8px solid rgba(99, 215, 250, 1);
+                  border-top: 8px solid transparent;
+                  position: absolute;
+                  top: 4px;
+                  left: 4px;
+                  transform: rotate(180deg);
+                }
+
+                label {
+                  &::before {
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    border-left: 8px solid rgba(99, 215, 250, 1);
+                    border-right: 8px solid transparent;
+                    border-bottom: 8px solid transparent;
+                    position: absolute;
+                    right: 4px;
+                    bottom: 4px;
+                    transform: rotate(180deg);
+                  }
+
+                  &::after {
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    border-left: 8px solid transparent;
+                    border-right: 8px solid rgba(99, 215, 250, 1);
+                    border-bottom: 8px solid transparent;
+                    position: absolute;
+                    bottom: 4px;
+                    left: 4px;
+                    transform: rotate(180deg);
+                  }
+                }
+
+                u {
+                  text-decoration: none;
+                  font-size: 20px;
+                  color: rgba(119, 248, 243, 1);
+                }
+              }
+
+              dd {
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 10px;
+                font-size: 15px;
+                border-bottom: 1px dashed rgba(9, 169, 217, 0.26);
+
+                u {
+                  text-decoration: none;
+                  color: rgba(119, 248, 243, 1);
+                }
+              }
+            }
+          }
+
+          .plist {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 15px;
+            height: 100%;
+
+            li {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              width: 25%;
+              height: 48%;
+              cursor: pointer;
+
+              i {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 50%;
+                position: relative;
+                top: 30px;
+                margin-bottom: 35px;
+                background: url("@/assets/paint/icon9.png") top center no-repeat;
+                background-size: 130% 100%;
+
+                &::before {
+                  content: "";
+                  display: block;
+                  width: 55%;
+                  height: 85%;
+                  position: absolute;
+                  bottom: 25px;
+                  background-size: 100% 100% !important;
+                }
+              }
+
+              &:first-child i::before {
+                background: url("@/assets/paint/icon1.png") top center no-repeat;
+              }
+
+              &:nth-child(2) i::before {
+                background: url("@/assets/paint/icon2.png") top center no-repeat;
+              }
+
+              &:nth-child(3) i::before {
+                background: url("@/assets/paint/icon3.png") top center no-repeat;
+              }
+
+              &:nth-child(4) i::before {
+                background: url("@/assets/paint/icon4.png") top center no-repeat;
+              }
+
+              &:nth-child(5) i::before {
+                background: url("@/assets/paint/icon5.png") top center no-repeat;
+              }
+
+              &:nth-child(6) i::before {
+                background: url("@/assets/paint/icon6.png") top center no-repeat;
+              }
+
+              &:nth-child(7) i::before {
+                background: url("@/assets/paint/icon7.png") top center no-repeat;
+              }
+
+              &:nth-child(8) i::before {
+                background: url("@/assets/paint/icon8.png") top center no-repeat;
+              }
+
+              span {
+                font-size: 14px;
+                color: #fff;
+
+                u {
+                  text-decoration: none;
+                  font-size: 24px;
+                  font-weight: bold;
+                  color: rgba(0, 253, 239, 1);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+::v-deep .esri-view .esri-view-surface--inset-outline:focus::after {
+  // outline: auto 0px Highlight !important;
+  // outline: auto 0px -webkit-focus-ring-color !important;
+  outline: 0 !important;
+}
+
+div#mapbox * {
+  outline: 0 !important;
+}
+  .cuspage {
+              button {
+                background: none ;
+                color: #fff ;
+                border: 1px solid #fff ;
+                border-radius: 50% ;
+              }
+              &.el-pagination.is-background .btn-next.is-disabled,
+              &.el-pagination.is-background .btn-next:disabled,
+              &.el-pagination.is-background .btn-prev.is-disabled,
+              &.el-pagination.is-background .btn-prev:disabled,
+              &.el-pagination.is-background .el-pager li.is-disabled,
+              &.el-pagination.is-background .el-pager li:disabled {
+                background: none ;
+              }
+              &.el-pagination.is-background .btn-next,
+              &.el-pagination.is-background .btn-prev,
+              &.el-pagination.is-background .el-pager li {
+                background: none ;
+                color: #fff ;
+              }
+              &.el-pagination.is-background .btn-next.is-active,
+              &.el-pagination.is-background .btn-prev.is-active,
+              &.el-pagination.is-background .el-pager li.active {
+                background: rgba(0, 161, 247, 1) ;
+                border-radius: 50% ;
+              }
+            }    // 滚动条样式
+           

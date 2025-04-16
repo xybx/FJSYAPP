@@ -1,0 +1,650 @@
+$el-main-color: #126AC4; // 主色
+
+::v-deep .el-header {
+    background: no-repeat url('@/assets/onemap/header.png');
+    background-size: cover;
+    height: 8vh !important;
+    color: white;
+    display: flex;
+
+    // align-items: center;
+    .header {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        // justify-content: space-between;
+        align-items: center;
+
+
+        .logo {
+            width: 2.3438vw;
+            height: 2.3438vw;
+            margin-right: 5px;
+        }
+
+        .tit {
+            font-size: 1.9vw;
+            line-height: 100%;
+            width:17vw;
+            font-weight: bolder;
+            margin-top: 3px;
+            margin-left: 20px;
+        }
+
+        .right {
+            width:60vw;
+            height:100%;
+            font-size:18px;
+            display: flex;
+            flex-direction:row;
+            align-items: center;
+            //padding-left: 40px;
+            // justify-content: flex-end !important;
+
+            .el-menu {
+                flex: 1;
+                height: 100%;
+                display: flex;
+                // justify-content: end;
+                background: none !important;
+                border-bottom: none !important;
+                padding-right: 30px;
+
+                .el-submenu__icon-arrow {
+                    display: none;
+                }
+
+                li,
+                li div {
+                    height: 100%;
+                    width: 12vw;
+                    line-height: 8vh;
+                    text-align: center;
+                    color: white !important;
+                    font-size: 16px !important;
+                    transition: .3s;
+
+                    &:hover {
+
+                        background: #dfe2e81f;
+                        // opacity: .7;
+                    }
+                }
+
+                .el-menu-item:focus {
+                    background: #5f95db;
+                }
+
+                li i {
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    vertical-align: sub;
+                }
+
+                .icon-1 {
+                    background-image: url('../../../assets/onemap/icon_1.png');
+                }
+
+                .icon-2 {
+                    background-image: url('../../../assets/onemap/icon_2.png');
+                }
+
+                .icon-3 {
+                    background-image: url('../../../assets/onemap/icon_3.png');
+                }
+
+
+                .icon-4 {
+                    background-image: url('../../../assets/onemap/icon_4.png');
+                }
+
+                .icon-5 {
+                    background-image: url('../../../assets/onemap/icon_5.png');
+                }
+
+                .icon-6 {
+                    background-image: url('../../../assets/onemap/icon_6.png');
+                }
+
+                // .icon-7 {
+                //     background-image: url('../../../assets/onemap/dltj.png');
+                // }
+
+            }
+
+
+            .el-menu--popup {
+                // display: block !important;
+                min-width: 550px !important;
+            }
+
+            .el-menu--popup-bottom-start:hover {
+                background: #b3bcc7;
+
+            }
+
+            .el-icon-arrow-down:before {
+                display: none;
+            }
+
+            .el-menu--horizontal>.el-submenu.is-active .el-submenu__title {
+                color: none !important;
+                border-bottom: none !important;
+                text-align: center;
+
+            }
+
+
+            .btn {
+                width: 16.66666%;
+                // display: flex;
+                float: left;
+
+                .clickAfter {
+                    // padding: 0 20px;
+                    background: #204B85;
+                }
+
+                .focus-div {
+                    position: relative;
+                }
+
+                span {
+                    height: 8vh;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+
+
+
+
+                }
+
+                span:hover {
+                    cursor: pointer;
+                    background: #568ed8;
+                    transition: .5s;
+                }
+
+                // span:hover .children-nav {}
+
+                .addspan {
+                    background: #204B85 100%;
+                }
+
+                .children-nav {
+                    width: 15vw;
+                    flex: none;
+                    padding: 0 !important;
+                    position: absolute;
+                    top: 82px;
+                    left: 5px;
+                    z-index: 9;
+                    color: #333;
+                    background: white;
+                    border-radius: 2px;
+
+                    // box-shadow: 0 1px 1px #126AC4;
+                    ul {
+                        padding: 0 !important;
+                        // margin: 0 !important;
+                        display: flex;
+                        flex-direction: column;
+                        margin: 10px 0px;
+                    }
+
+                    li {
+                        width: 100%;
+                        text-indent: 15px;
+                        // margin: 0px 15px;
+                        line-height: 35px;
+                        list-style: none;
+                        font-size: 15px;
+                        cursor: pointer;
+
+
+                        &:hover {
+                            transition: .3s;
+                            background: #b2c9e9;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+
+
+        .admin:hover {
+            cursor: default;
+            // display: block;
+        }
+
+        // .admin:hover .logout{
+        //     cursor: pointer;
+        //     display: block;
+        // }
+        // .logout:hover{
+        //     color: black;
+        // }
+
+    }
+
+
+    .admin {
+        width:23vw;
+        margin-left: auto;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+
+
+        i {
+            width: 24px;
+            height: 24px;
+            background-image: url('../../../assets/onemap/user.png');
+            margin-right: 5px;
+            margin-bottom: 2px;
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            margin-left: 3px;
+            margin-top: 3px;
+            border: solid 5px;
+            border-top-color: white;
+            border-bottom-color: transparent;
+            border-left-color: transparent;
+            border-right-color: transparent;
+        }
+
+        .reindex {
+            width: 5vw;
+            display: flex;
+            justify-content: center;
+            margin-right: 2vw;
+        }
+
+        .reindex:hover {
+            // color: ;
+            cursor: pointer;
+            // background: #204B85 100%;
+
+        }
+
+        .logout {
+            width: 3.5vw;
+            display: flex;
+            justify-content: center;
+            margin-left: 1vw;
+        }
+
+        .logout:hover {
+            // color: ;
+            cursor: pointer;
+            transition: .5s;
+            border-radius: 2px;
+            background: #4d86cf;
+
+        }
+    }
+}
+
+::v-deep .main {
+    overflow: hidden;
+
+    .open {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: url('../../../assets/onemap/open.png') #fff no-repeat 3px center;
+        background-size: 68% 68%;
+        position: absolute;
+        top: 40%;
+        z-index: 1;
+        border-bottom-right-radius: 50%;
+        border-top-right-radius: 50%;
+        cursor: pointer;
+    }
+
+    .el-aside {
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        height: 92vh;
+        flex-direction: column;
+        color: #333;
+
+        .el-input {
+            padding: 5px;
+        }
+
+        .input {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            // padding: 5px;
+
+            .slide {
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                margin-right: 5px;
+                background-image: url('../../../assets/onemap/close.png');
+            }
+
+            .el-input {
+                // width: 200px;
+                flex: 1;
+            }
+
+        }
+
+        //图层调整顺序
+        .tuceng {
+            height: 4vh;
+
+            .tuceng-button {
+                display: flex;
+                width: 13vw;
+                background-color: #E6EBF2;
+                border: 1px solid #2058A5;
+                border-radius: 4px;
+                margin: 0 1vw;
+                justify-content: center;
+                align-items: baseline;
+                color: #2058A5;
+
+                i {
+                    margin-right: 0.5vw;
+                }
+            }
+        }
+
+        .tuceng:hover {
+            cursor: pointer;
+        }
+
+        .layer-tree {
+            padding: 0 0.3vw;
+            overflow-y: auto;
+            min-width: 15vw;
+        }
+
+        .layer-tree::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .layer-tree::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            opacity: 0.2;
+            background: rgb(18, 106, 196);
+        }
+
+        //设置滚动条滑块样式
+        .layer-tree::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 0;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        //设置滚动条背景框
+
+        .layer-tree .el-tree-node__expand-icon {
+            font-size: 15px;
+        }
+
+        .el-tree-node__content {
+            height: auto;
+            text-align: left;
+            align-items: baseline;
+            // white-space: normal;
+            font-size: 15px;
+            padding: 5px 0;
+            padding-right: 20px;
+
+
+            // transition: .5s !important;
+            &:hover {
+                height: auto !important;
+            }
+
+            .el-tree-node__expand-icon {
+                padding: 5px;
+            }
+
+            .is-leaf {
+                opacity: 0;
+            }
+
+
+
+        }
+
+        .is-current {
+            // color: $el-main-color;
+            border-left: 4px solid $el-main-color;
+        }
+
+        .is-half-check+span {
+            .label-style {
+                color: $el-main-color;
+                font-weight: 700;
+
+            }
+
+        }
+
+        .el-tree-node__content>label.el-checkbox+span {
+            width: 100%;
+            display: flex;
+            flex: 1;
+            justify-content: space-between;
+
+            span+span {
+                float: right;
+            }
+
+            .el-icon-folder-opened {
+                &:hover {
+                    color: rgb(19, 105, 185);
+                    font-weight: 600;
+                }
+            }
+
+            .el-icon-suitcase {
+                display: flex;
+                z-index: 9;
+                position: fixed;
+                margin-left: -25px;
+                margin-top: 5px;
+                // max-width: 2px !important;
+                width: 0px;
+
+                &:hover {
+                    width: 100px !important;
+
+                }
+
+                &:hover .el-slider {
+                    opacity: 1;
+                    transition: opacity .5s;
+                }
+
+                .el-slider {
+                    opacity: 0;
+                    margin-top: -2px !important;
+                    margin-left: 5px;
+
+                    .el-slider__button-wrapper {
+                        width: 10px !important;
+                        height: 10px !important;
+                        margin-top: 8.5px;
+                    }
+                }
+            }
+        }
+
+        .el-tree-node__content>label.el-checkbox+span+span {
+            width: 100vw !important;
+            display: flex;
+            justify-content: space-between;
+            // background: #000;
+
+            span+span {
+                float: right;
+            }
+
+            .el-icon-folder-opened {
+                &:hover {
+                    color: rgb(19, 105, 185);
+                    font-weight: 600;
+                }
+            }
+
+        }
+
+
+        .label-style {
+            display: block;
+            max-height: 30px !important;
+            max-width: 150px !important;
+            overflow: hidden;
+            white-space: nowrap !important;
+            text-overflow: ellipsis !important;
+            // box-sizing: content-box;
+
+
+            &:hover {
+                white-space: normal !important;
+                // text-overflow: clip !important;
+                max-height: 55px !important;
+                transition: .4s;
+
+            }
+
+            .el-slider {
+                position: absolute !important;
+                margin-left: 100px;
+                margin-top: -10px;
+            }
+
+            .label-list-style {
+                margin-left: 4px;
+                font-size: 13px;
+                color: $el-main-color;
+            }
+        }
+
+        .el-switch__core {
+            width: 40px !important;
+        }
+
+        .is-checked {
+            span {
+                color: $el-main-color;
+                font-weight: 700;
+            }
+
+            .el-checkbox__inner::before {
+                color: $el-main-color;
+                font-weight: 400;
+            }
+        }
+
+        .icon-collect {
+            margin: 0 3px;
+        }
+
+        .el-slider {
+            position: relative;
+            left: 5px;
+            width: 130px;
+        }
+
+        .el-slider .el-slider__button {
+            width: 5px;
+            height: 5px;
+        }
+
+        .el-slider .el-slider__runway {
+            height: 2px;
+            margin: 8px 0 5px;
+        }
+
+        .el-slider .el-slider__bar {
+            height: 2px;
+        }
+
+        .el-slider__button-wrapper {
+            top: -17px;
+        }
+
+        .icon-color {
+            color: $el-main-color;
+        }
+
+        .el-checkbox__inner::after {
+            width: 0.2vw;
+        }
+
+        .is-leaf.el-icon-arrow-down {
+            display: none;
+        }
+
+        .icon-legend {
+            background-image: url("../../../assets/onemap/legend.png");
+        }
+    }
+
+    .el-main {
+        background-color: #eee;
+        padding: 0;
+        height: 92vh;
+        overflow: hidden;
+
+        .draggable {
+            position: absolute;
+            top: 12vh;
+            left: 72vw;
+            max-height: 40vh;
+            width: 20vw;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+
+            .header {
+                display: flex;
+                background-color: #126AC4;
+                ;
+                color: #fff;
+                justify-content: space-between;
+                align-items: baseline;
+                padding: 0 5px;
+            }
+
+            .el-table .el-table--fit .el-table--border .el-table--enable-row-hover .el-table--enable-row-transition {
+                overflow-y: auto !important;
+            }
+
+        }
+    }
+}
+
+
+// ::v-deep .mapbox {
+//     .esri-view-root:focus-visible {
+//         outline: none !important;
+//     }
+
+//     :deep(.esri-view-surface):focus::after {
+//         outline: none !important;
+//     }
+
+// }

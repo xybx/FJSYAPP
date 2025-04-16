@@ -1,0 +1,37 @@
+{
+  "name": "fjsy",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start":"pnpm run serve",
+    "serve": "npm run copy && vue-cli-service serve",
+    "build": "npm run copy && vue-cli-service build",
+    "copy": "ncp ./node_modules/@arcgis/core/assets ./public/arcgis_assets"
+  },
+  "dependencies": {
+    "@arcgis/core": "^4.23.7",
+    "@jiaminghi/data-view": "^2.10.0",
+    "animate.css": "^4.1.1",
+    "axios": "^1.0.0",
+    "core-js": "^3.8.3",
+    "echarts": "^5.4.0",
+    "element-ui": "^2.15.10",
+    "jsencrypt": "^3.3.2",
+    "ncp": "^2.0.0",
+    "sortablejs": "^1.15.0",
+    "vue": "2.6.14",
+    "vue-directive-extend": "^0.1.5",
+    "vue-router": "^3.5.1",
+    "vuedraggable": "^2.24.3",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-plugin-vuex": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "sass": "^1.32.7",
+    "sass-loader": "^12.0.0",
+    "vue-template-compiler": "2.6.14"
+  }
+}

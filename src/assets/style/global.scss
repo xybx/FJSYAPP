@@ -1,0 +1,90 @@
+$el-main-color: #126AC4; // 主色
+// 一张图-注意事项
+.popover {
+    margin-left: 15px;
+    .tips {
+        color: red;
+        div {
+            padding: 3px 0;
+        }
+    }
+    .el-popover__title {
+        background-color: #f0f8ff;
+        margin-bottom: 0;
+        padding: 10px 0;
+        padding-left: 10px;
+        letter-spacing: 1px;
+        border-radius: 4px;
+    }
+    // 注意事项-叠加图纸
+    .link-template {
+        cursor: pointer;
+        color: $el-main-color;
+        padding-bottom: 1px;
+        border-bottom: 1px solid $el-main-color;
+    }
+}
+.fselbox{
+    border-color:rgba(43, 112, 220, .8);
+    background-color:rgba(20, 48, 98, .9);
+    color: #fff;
+    .el-picker-panel__body{
+        .el-date-picker__header--bordered{
+            border-bottom-color:#fff;
+            .el-picker-panel__icon-btn{
+                color:#fff;
+            }
+            .el-date-picker__header-label{
+                color:#fff;
+            }
+        }
+        .el-picker-panel__content {
+            .el-date-table th {
+                color: #fff;
+            }
+        }
+        .el-date-range-picker__header {
+            .el-picker-panel__icon-btn {
+                color: #fff;
+            }
+        }
+        .el-picker-panel__content{
+            .el-year-table td .cell{
+                color:#fff;
+            }
+            .el-year-table td.today .cell{
+                color:#409EFF;
+            }
+            .el-month-table td .cell{
+                color:#fff;
+            }
+            .el-month-table td.today .cell{
+                color:#409EFF;
+            }
+        }
+    }
+    .el-select-dropdown__list{
+        li{
+            color:#fff;
+        }
+        .el-select-dropdown__item.hover, .el-select-dropdown__item:hover{
+            background-color:rgba(111, 178, 252, 1);
+            color: rgb(11, 107, 252);
+        }
+    }
+
+    .popper__arrow{
+        border-bottom-color:rgba(43, 112, 220, .8)!important;
+        &::after{
+            border-bottom-color:rgba(20, 48, 98, .9)!important;
+        }
+    }
+
+}
+// 表格表头
+.el-table {
+    th {
+        background-color: $el-main-color !important;
+        color: #fff;
+    }
+}
